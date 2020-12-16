@@ -1,7 +1,9 @@
 module.exports={
+    
+    async test(req,res){
+        res.send("test router user")
 
-    async   getUser(req,res){
-
+      return locator.tototo('in_memory' , user)
     },
     
 }

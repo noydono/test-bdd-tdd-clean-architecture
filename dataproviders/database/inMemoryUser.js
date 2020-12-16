@@ -1,27 +1,27 @@
+const UserEntitie = require("../../core/entities/userEntitie");
+module.exports = class extends inMemoryUser {
 
 
-module.exports = class inMemoryUser {
-
-
-    constructor(objData) {
-        this.data = objData
+    constructor() {
+        super();
+        this.data = {}
     }
 
-
-    add(userEntitie) {
-
+    addUser(userEntitie) {
+        this.data = userEntitie
     }
 
-    getByFirstName(name) {
-        let map = this.data.find(x => {
-            if (x.firstname === name) {
-                return x.firstname
+    getUserById(id) {
+        
+        let user = this.data.find(userEntitie => {
+            if (userEntitie.id === id) {
+                return userEntitie
             }
         });
-        return map.firstname
+        return user.id
     }
 
-    all() {
+    getAllUser() {
         return this.data
     }
 

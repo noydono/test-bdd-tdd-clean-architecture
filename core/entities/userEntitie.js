@@ -1,9 +1,10 @@
-module.exports = class UserEntitie {
+module.exports = class {
 
-    constructor(id, firstname, email) {
-      this.id = id;
-      this.firstname = firstname;
+    constructor(id = null, pseudo, email , password) {
+      this.id = id
+      this.pseudo = pseudo;
       this.email = email;
+      this.password = password;
     }
   
   };
